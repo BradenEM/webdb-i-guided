@@ -58,7 +58,7 @@ router.delete('/:id', async (req, res) => {
 		const {id} = req.params;
 		const post = await db('posts').where('id', '=', id).del();
 
-		res.status(204).json(post)
+		res.status(200).json(post)
 	} catch (error) {
 		res.status(500).json(error);
 	}
